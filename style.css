@@ -32,7 +32,11 @@ body {
   margin: 0 auto 0;
 }
 
-.new-task__input, .incomplete-tasks__input_text, .completed-tasks__input_text, .incomplete-tasks__label, .completed-tasks__label {
+.new-task__input,
+.incomplete-tasks__input_text,
+.completed-tasks__input_text,
+.incomplete-tasks__label,
+.completed-tasks__label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -42,20 +46,32 @@ body {
   display: flex;
 }
 
-#incomplete-tasks, #completed-tasks {
+#incomplete-tasks,
+#completed-tasks {
   margin: 0;
   padding: 0px;
 }
 
-.incomplete-tasks__task, .incomplete-tasks__edit-mode, .completed-tasks__task, .main__todo, .main__completed {
+.incomplete-tasks__task,
+.incomplete-tasks__edit-mode,
+.completed-tasks__task,
+.main__todo,
+.main__completed {
   list-style: none;
 }
 
-.new-task__input, .incomplete-tasks__input, .completed-tasks__input, .new-task__button, .incomplete-tasks__button, .completed-tasks__button {
+.new-task__input,
+.incomplete-tasks__input,
+.completed-tasks__input,
+.new-task__button,
+.incomplete-tasks__button,
+.completed-tasks__button {
   outline: none;
 }
 
-.new-task__button, .incomplete-tasks__button, .completed-tasks__button  {
+.new-task__button,
+.incomplete-tasks__button,
+.completed-tasks__button  {
   background: none;
   border: 0px;
   color: #888;
@@ -65,12 +81,16 @@ body {
   cursor: pointer;
 }
 
-.new-task__button:hover, .incomplete-tasks__button:hover, .completed-tasks__button:hover {
+.new-task__button:hover,
+.incomplete-tasks__button:hover,
+.completed-tasks__button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-.main__todo, .main__completed, .add-item__label {
+.main__todo,
+.main__completed,
+.add-item__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
