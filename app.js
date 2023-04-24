@@ -33,18 +33,21 @@ var createNewTaskElement = function (taskString) {
   var deleteButtonImg = document.createElement("img");//delete button image
 
   label.innerText = taskString;
-  label.className = "task";
+  label.className = "incomplete-tasks__label";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
+  checkBox.className = "incomplete-tasks__input";
+
   editInput.type = "text";
-  editInput.className = "task";
+  editInput.className = "incomplete-tasks__input incomplete-tasks__input_text";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "edit";
+  editButton.className = "incomplete-tasks__button edit";
 
-  deleteButton.className = "delete";
+  deleteButton.className = "incomplete-tasks__button delete";
   deleteButtonImg.src = "./remove.svg";
+  deleteButtonImg.className = "images-delete"
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -66,9 +69,9 @@ var addTask = function () {
   var listItem = createNewTaskElement(taskInput.value);
 
   //Append listItem to incompleteTaskHolder
+  listItem.classList.add("incomplete-tasks__task")
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
-
   taskInput.value = "";
 
 }
@@ -121,6 +124,14 @@ var taskCompleted = function () {
 
   //Append the task list item to the #main__completed-tasks
   var listItem = this.parentNode;
+  listItem.classList = "completed-tasks__task";
+  listItem.children[0].classList = "completed-tasks__input";
+  listItem.children[1].classList = "completed-tasks__label";
+  listItem.children[2].classList = "completed-tasks__input completed-tasks__input_text";
+  listItem.children[3].classList = "completed-tasks__button edit";
+  listItem.children[4].classList = "completed-tasks__button delete";
+
+  console.log(listItem.children)
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 
